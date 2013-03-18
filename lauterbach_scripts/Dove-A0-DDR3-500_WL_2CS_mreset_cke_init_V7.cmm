@@ -1,0 +1,171 @@
+; initialize system
+; initialize system
+AREA.CLEAR
+AREA
+diag 16001
+SYStem.RESet
+SYStem.CPU 88FR581V7
+SYStem.MultiCore COREBASE 0xc2301000
+SYStem.MultiCore MEMORYACCESSPORT 0
+SYStem.MultiCore DEBUGACCESSPORT 1
+SYStem.MultiCore JTAGACCESSPORT 2
+SYStem.OPTION.RESBREAK ON
+SYStem.OPTION.ENRESET  OFF
+SYStem.OPTION.TRST     OFF
+SYStem.JTAGCLOCK 10MHz
+SYStem.mode attach
+SYStem.Up
+ 
+; set system settings according LE MMU
+Data.Set C15:1 %LONG 0x00052078 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; CKE_MRESET Workaround
+print " "
+print " "
+print "CKE and M_RESET Workaround..."
+; Change MPP 4&6 to be PMU domain
+D.S ZSD:0xD00D0210 %LE %LONG 0x00000050
+
+; Initialize both MPP4 and MPP6 drive 0 ===> assert M_RESET
+D.S ZSD:0xD00D802C %LE %LONG 0x01010000
+WAIT 1.s
+; Deassert M_RESET throuigh changing MPP6 to input
+D.S ZSD:0xD00D802C %LE %LONG 0x00010000
+WAIT 1.s
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+print "Starting MC initialization..."
+; PEX
+d.s 0xD0020104 %LONG 0x00000000
+d.s 0xD0800020 %LONG 0x00022430
+d.s 0xD0800030 %LONG 0x00022430
+d.s 0xD0800050 %LONG 0x911500C3
+d.s 0xD0800060 %LONG 0x646602C4
+d.s 0xD0800190 %LONG 0xC2003053
+d.s 0xD08001C0 %LONG 0x34F4A187
+d.s 0xD0800650 %LONG 0x000F40F4
+d.s 0xD0800660 %LONG 0x84040200
+d.s 0xD0800080 %LONG 0x00000000
+d.s 0xD0800090 %LONG 0x00080000
+d.s 0xD08000F0 %LONG 0xC0000000
+d.s 0xD08001A0 %LONG 0x20C0C009
+d.s 0xD0800280 %LONG 0x010E0202
+d.s 0xD0800760 %LONG 0x00000201
+d.s 0xD0800770 %LONG 0x0100000A
+d.s 0xD0800140 %LONG 0x20004044
+d.s 0xD08001D0 %LONG 0x177C2779
+d.s 0xD08001E0 %LONG 0x07700330
+d.s 0xD08001F0 %LONG 0x00000033
+d.s 0xD0800200 %LONG 0x0011311C
+d.s 0xD0800210 %LONG 0x00300000
+d.s 0xD0800240 %LONG 0x80000000
+d.s 0xD0800510 %LONG 0x010E0101
+d.s 0xD0800230 %LONG 0x2028006A
+d.s 0xD0800E10 %LONG 0x00280062
+d.s 0xD0800E20 %LONG 0x00280062
+d.s 0xD0800E30 %LONG 0x00280062
+d.s 0xD0800100 %LONG 0x000D0001
+d.s 0xD0800110 %LONG 0x200D0001
+d.s 0xD0800120 %LONG 0x00000001
+d.s 0xD0020104 %LONG 0x00000000
+d.s 0xD0020104 %LONG 0x00000000
+d.s 0xD0020104 %LONG 0x00000000
+d.s 0xD0020104 %LONG 0x00000000
+d.s 0xD0020104 %LONG 0x00000000
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; DDR3 Write Leveling
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+print "Starting DDR3 Write Leveling..."
+LOCAL &status   ; R250 data bit 
+LOCAL &index   ; Temp index
+LOCAL &value ; value of leveling
+LOCAL &lane ; Lane Number
+
+LOCAL &tmp_i ; temp index
+LOCAL &wl_results ; saved write leveling results
+
+&index=0
+&value=0
+&lane=0
+&status=0
+&save_odt=0
+
+&tmp_i=0
+&wl_results=0
+
+&save_odt=Data.Long(SD:0xD0800770)
+; Force ODT always on
+Data.Set 0xD0800770 %LONG 0xF1000001
+
+;; Disable pulldown on PHY
+Data.Set 0xD0800200 %LONG 0x00113100
+
+;; Enable MC write level mode
+Data.Set 0xD0800090 %LONG 0x00080044
+
+;; Enable write leveling for CS0
+Data.Set 0xD0800080 %LONG 0x00000004
+
+Data.Set 0xD0800120 %LONG 0x01000200
+
+
+
+while (&lane!=4)
+(
+	Data.Set SD:0xD0800250 %Long 0x80000000
+   	Data.Set SD:0xD0800E40 %LONG 0x00000100+&lane
+	WHILE (&status!=(1<<&lane)) 
+	( 
+		&value=&index<<0x10|&index
+	 	Data.Set SD:0xD0800E50 %Long &value
+	  	Data.Set SD:0xD0800250 %Long 0x80000000 
+ 	 	&status=Data.Long(SD:0xD0800250) 
+		&status=&status&(1<<&lane)
+		&tmp_i=&index
+		&index=&index+1 
+	)
+
+	; use the same value for CS1:
+	Data.Set SD:0xD0800E40 %LONG 0x00000200+&lane
+	Data.Set SD:0xD0800E50 %Long &value
+
+	&wl_results=&wl_results|(&tmp_i<<(&lane<<3))
+
+   	&lane=&lane+1
+   	&index=0
+   	&value=0
+)
+
+;; Save results of write leveling in Crypto SRAM
+Data.Set 0xC8010000 %LONG &wl_results
+
+;; Disble write leveling for CS0
+Data.Set 0xD0800080 %LONG 0x00000000
+Data.Set 0xD0800120 %LONG 0x01000200
+
+;; Disble MC write level mode
+Data.Set 0xD0800090 %LONG 0x00080000
+
+
+;; Enable pulldown on PHY
+Data.Set 0xD0800200 %LONG 0x0011311C
+
+; enable ODT during both read/write
+Data.Set 0xD0800770 %LONG &save_odt
+print "Done (;-)"
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;FPU.TARGET ASD:0x400000++0xFFF
+;FPU.TARGET 0x00002000++0xFFF   ;Linux. Must disable MMU
+
+ 
+; Set program counter at program start to be ready for start
+; Register.Set pc 0xffff0000
+; R.S PC 670000
+enddo
+
+
+

@@ -1,0 +1,85 @@
+; initialize system
+; initialize system
+AREA.CLEAR
+AREA
+diag 16001
+SYStem.RESet
+SYStem.CPU 88FR581V7
+SYStem.MultiCore COREBASE 0xc2301000
+SYStem.MultiCore MEMORYACCESSPORT 0
+SYStem.MultiCore DEBUGACCESSPORT 1
+SYStem.MultiCore JTAGACCESSPORT 2
+SYStem.OPTION.RESBREAK ON
+SYStem.OPTION.ENRESET  OFF
+SYStem.OPTION.TRST     OFF
+SYStem.JTAGCLOCK 10MHz
+SYStem.mode attach
+SYStem.Up
+ 
+; set system settings according LE MMU
+Data.Set C15:1 %LONG 0x00052078 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; CKE_MRESET Workaround
+print " "
+print " "
+print "CKE and M_RESET Workaround..."
+; Change MPP 4&6 to be PMU domain
+D.S ZSD:0xD00D0210 %LE %LONG 0x00000050
+
+; Initialize both MPP4 and MPP6 drive 0 ===> assert M_RESET
+D.S ZSD:0xD00D802C %LE %LONG 0x01010000
+WAIT 1.s
+; Deassert M_RESET throuigh changing MPP6 to input
+D.S ZSD:0xD00D802C %LE %LONG 0x00010000
+WAIT 1.s
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+print "Starting DDR initialization..."
+; PEX
+d.s 0xD0020104 %LONG 0x00000000
+d.s 0xD0800020 %LONG 0x00022430
+d.s 0xD0800030 %LONG 0x00022430
+d.s 0xD0800050 %LONG 0x4CD800C3
+d.s 0xD0800060 %LONG 0x53560332
+d.s 0xD0800190 %LONG 0x50C83742
+d.s 0xD08001C0 %LONG 0x34F400A0
+d.s 0xD0800650 %LONG 0x001200E4
+d.s 0xD0800660 %LONG 0x04040200
+d.s 0xD0800080 %LONG 0x00000000
+d.s 0xD0800090 %LONG 0x00080000
+d.s 0xD08000F0 %LONG 0xC0000000
+d.s 0xD08001A0 %LONG 0x20814005
+d.s 0xD0800280 %LONG 0x010E0202
+d.s 0xD0800760 %LONG 0x00000201
+d.s 0xD0800770 %LONG 0x0100000A
+d.s 0xD0800140 %LONG 0x20004444
+d.s 0xD08001D0 %LONG 0x177C2CC9
+d.s 0xD08001E0 %LONG 0x0FF00770
+d.s 0xD08001F0 %LONG 0x3F000077
+d.s 0xD0800200 %LONG 0x0011311C
+d.s 0xD0800210 %LONG 0x00300000
+d.s 0xD0800240 %LONG 0x80000000
+d.s 0xD0800510 %LONG 0x010E0101
+d.s 0xD0800230 %LONG 0x2025004A
+d.s 0xD0800E10 %LONG 0x00250042
+d.s 0xD0800E20 %LONG 0x00250042
+d.s 0xD0800E30 %LONG 0x00250042
+d.s 0xD0800100 %LONG 0x000D0001
+d.s 0xD0800110 %LONG 0x200D0001
+d.s 0xD0800120 %LONG 0x00000001
+d.s 0xD0020104 %LONG 0x00000000
+d.s 0xD0020104 %LONG 0x00000000
+d.s 0xD0020104 %LONG 0x00000000
+d.s 0xD0020104 %LONG 0x00000000
+d.s 0xD0020104 %LONG 0x00000000
+
+print "Done"
+; Set program counter at program start to be ready for start
+; Register.Set pc 0xffff0000
+; R.S PC 680000
+enddo
+
+
+
