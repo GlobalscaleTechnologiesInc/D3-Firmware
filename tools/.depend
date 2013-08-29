@@ -1,0 +1,435 @@
+env_embedded.o: \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/common/env_embedded.c \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/include/config.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/include/configs/mv_dove.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/include/asm/config.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/include/configs/../../board/marvell/mv_dove/config/mvSysHwConfig.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/include/config_cmd_default.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/include/environment.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/include/compiler.h \
+ /usr/lib/gcc/i686-redhat-linux/4.5.1/include/stddef.h \
+ /usr/lib/gcc/i686-redhat-linux/4.5.1/include/stdint.h \
+ /usr/include/stdint.h /usr/include/features.h /usr/include/sys/cdefs.h \
+ /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+ /usr/include/gnu/stubs-32.h /usr/include/bits/wchar.h \
+ /usr/include/errno.h /usr/include/bits/errno.h \
+ /usr/include/linux/errno.h /usr/include/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/stdlib.h /usr/include/bits/waitflags.h \
+ /usr/include/bits/waitstatus.h /usr/include/endian.h \
+ /usr/include/bits/endian.h /usr/include/bits/byteswap.h \
+ /usr/include/sys/types.h /usr/include/bits/types.h \
+ /usr/include/bits/typesizes.h /usr/include/time.h \
+ /usr/include/sys/select.h /usr/include/bits/select.h \
+ /usr/include/bits/sigset.h /usr/include/bits/time.h \
+ /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h \
+ /usr/include/alloca.h /usr/include/stdio.h /usr/include/libio.h \
+ /usr/include/_G_config.h /usr/include/wchar.h \
+ /usr/lib/gcc/i686-redhat-linux/4.5.1/include/stdarg.h \
+ /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+ /usr/include/bits/stdio.h /usr/include/string.h /usr/include/xlocale.h \
+ /usr/include/bits/string.h /usr/include/bits/string2.h \
+ /usr/include/sys/mman.h /usr/include/bits/mman.h /usr/include/fcntl.h \
+ /usr/include/bits/fcntl.h /usr/include/bits/stat.h \
+ /usr/include/byteswap.h
+crc32.o: \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/lib_generic/crc32.c \
+ /usr/lib/gcc/i686-redhat-linux/4.5.1/include/stdint.h \
+ /usr/include/stdint.h /usr/include/features.h /usr/include/sys/cdefs.h \
+ /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+ /usr/include/gnu/stubs-32.h /usr/include/bits/wchar.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/include/u-boot/zlib.h
+md5.o: /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/lib_generic/md5.c \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/include/compiler.h \
+ /usr/lib/gcc/i686-redhat-linux/4.5.1/include/stddef.h \
+ /usr/lib/gcc/i686-redhat-linux/4.5.1/include/stdint.h \
+ /usr/include/stdint.h /usr/include/features.h /usr/include/sys/cdefs.h \
+ /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+ /usr/include/gnu/stubs-32.h /usr/include/bits/wchar.h \
+ /usr/include/errno.h /usr/include/bits/errno.h \
+ /usr/include/linux/errno.h /usr/include/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/stdlib.h /usr/include/bits/waitflags.h \
+ /usr/include/bits/waitstatus.h /usr/include/endian.h \
+ /usr/include/bits/endian.h /usr/include/bits/byteswap.h \
+ /usr/include/sys/types.h /usr/include/bits/types.h \
+ /usr/include/bits/typesizes.h /usr/include/time.h \
+ /usr/include/sys/select.h /usr/include/bits/select.h \
+ /usr/include/bits/sigset.h /usr/include/bits/time.h \
+ /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h \
+ /usr/include/alloca.h /usr/include/stdio.h /usr/include/libio.h \
+ /usr/include/_G_config.h /usr/include/wchar.h \
+ /usr/lib/gcc/i686-redhat-linux/4.5.1/include/stdarg.h \
+ /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+ /usr/include/bits/stdio.h /usr/include/string.h /usr/include/xlocale.h \
+ /usr/include/bits/string.h /usr/include/bits/string2.h \
+ /usr/include/sys/mman.h /usr/include/bits/mman.h /usr/include/fcntl.h \
+ /usr/include/bits/fcntl.h /usr/include/bits/stat.h \
+ /usr/include/byteswap.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/include/u-boot/md5.h
+sha1.o: \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/lib_generic/sha1.c \
+ /usr/include/string.h /usr/include/features.h /usr/include/sys/cdefs.h \
+ /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+ /usr/include/gnu/stubs-32.h \
+ /usr/lib/gcc/i686-redhat-linux/4.5.1/include/stddef.h \
+ /usr/include/xlocale.h /usr/include/bits/string.h \
+ /usr/include/bits/string2.h /usr/include/endian.h \
+ /usr/include/bits/endian.h /usr/include/bits/byteswap.h \
+ /usr/include/bits/types.h /usr/include/bits/typesizes.h \
+ /usr/include/stdlib.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/include/watchdog.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/include/sha1.h
+image.o: /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/common/image.c \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/tools/mkimage.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/tools/os_support.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/include/compiler.h \
+ /usr/lib/gcc/i686-redhat-linux/4.5.1/include/stddef.h \
+ /usr/lib/gcc/i686-redhat-linux/4.5.1/include/stdint.h \
+ /usr/include/stdint.h /usr/include/features.h /usr/include/sys/cdefs.h \
+ /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+ /usr/include/gnu/stubs-32.h /usr/include/bits/wchar.h \
+ /usr/include/errno.h /usr/include/bits/errno.h \
+ /usr/include/linux/errno.h /usr/include/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/stdlib.h /usr/include/bits/waitflags.h \
+ /usr/include/bits/waitstatus.h /usr/include/endian.h \
+ /usr/include/bits/endian.h /usr/include/bits/byteswap.h \
+ /usr/include/sys/types.h /usr/include/bits/types.h \
+ /usr/include/bits/typesizes.h /usr/include/time.h \
+ /usr/include/sys/select.h /usr/include/bits/select.h \
+ /usr/include/bits/sigset.h /usr/include/bits/time.h \
+ /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h \
+ /usr/include/alloca.h /usr/include/stdio.h /usr/include/libio.h \
+ /usr/include/_G_config.h /usr/include/wchar.h \
+ /usr/lib/gcc/i686-redhat-linux/4.5.1/include/stdarg.h \
+ /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+ /usr/include/bits/stdio.h /usr/include/string.h /usr/include/xlocale.h \
+ /usr/include/bits/string.h /usr/include/bits/string2.h \
+ /usr/include/sys/mman.h /usr/include/bits/mman.h /usr/include/fcntl.h \
+ /usr/include/bits/fcntl.h /usr/include/bits/stat.h \
+ /usr/include/byteswap.h /usr/include/sys/stat.h /usr/include/unistd.h \
+ /usr/include/bits/posix_opt.h /usr/include/bits/environments.h \
+ /usr/include/bits/confname.h /usr/include/getopt.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/include/sha1.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/tools/fdt_host.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/tools/../include/fdt.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/tools/../include/libfdt.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/include/libfdt_env.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/include/compiler.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/include/fdt.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/tools/../include/fdt_support.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/include/u-boot/md5.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/include/image.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/include/command.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/include/config.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/include/configs/mv_dove.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/include/asm/config.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/include/configs/../../board/marvell/mv_dove/config/mvSysHwConfig.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/include/config_cmd_default.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/include/libfdt.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/include/fdt_support.h
+img2srec.o: \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/tools/img2srec.c \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/tools/os_support.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/include/compiler.h \
+ /usr/lib/gcc/i686-redhat-linux/4.5.1/include/stddef.h \
+ /usr/lib/gcc/i686-redhat-linux/4.5.1/include/stdint.h \
+ /usr/include/stdint.h /usr/include/features.h /usr/include/sys/cdefs.h \
+ /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+ /usr/include/gnu/stubs-32.h /usr/include/bits/wchar.h \
+ /usr/include/errno.h /usr/include/bits/errno.h \
+ /usr/include/linux/errno.h /usr/include/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/stdlib.h /usr/include/bits/waitflags.h \
+ /usr/include/bits/waitstatus.h /usr/include/endian.h \
+ /usr/include/bits/endian.h /usr/include/bits/byteswap.h \
+ /usr/include/sys/types.h /usr/include/bits/types.h \
+ /usr/include/bits/typesizes.h /usr/include/time.h \
+ /usr/include/sys/select.h /usr/include/bits/select.h \
+ /usr/include/bits/sigset.h /usr/include/bits/time.h \
+ /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h \
+ /usr/include/alloca.h /usr/include/stdio.h /usr/include/libio.h \
+ /usr/include/_G_config.h /usr/include/wchar.h \
+ /usr/lib/gcc/i686-redhat-linux/4.5.1/include/stdarg.h \
+ /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+ /usr/include/bits/stdio.h /usr/include/string.h /usr/include/xlocale.h \
+ /usr/include/bits/string.h /usr/include/bits/string2.h \
+ /usr/include/sys/mman.h /usr/include/bits/mman.h /usr/include/fcntl.h \
+ /usr/include/bits/fcntl.h /usr/include/bits/stat.h \
+ /usr/include/byteswap.h /usr/include/ctype.h /usr/include/elf.h \
+ /usr/include/unistd.h /usr/include/bits/posix_opt.h \
+ /usr/include/bits/environments.h /usr/include/bits/confname.h \
+ /usr/include/getopt.h
+mkimage.o: \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/tools/mkimage.c \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/tools/mkimage.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/tools/os_support.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/include/compiler.h \
+ /usr/lib/gcc/i686-redhat-linux/4.5.1/include/stddef.h \
+ /usr/lib/gcc/i686-redhat-linux/4.5.1/include/stdint.h \
+ /usr/include/stdint.h /usr/include/features.h /usr/include/sys/cdefs.h \
+ /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+ /usr/include/gnu/stubs-32.h /usr/include/bits/wchar.h \
+ /usr/include/errno.h /usr/include/bits/errno.h \
+ /usr/include/linux/errno.h /usr/include/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/stdlib.h /usr/include/bits/waitflags.h \
+ /usr/include/bits/waitstatus.h /usr/include/endian.h \
+ /usr/include/bits/endian.h /usr/include/bits/byteswap.h \
+ /usr/include/sys/types.h /usr/include/bits/types.h \
+ /usr/include/bits/typesizes.h /usr/include/time.h \
+ /usr/include/sys/select.h /usr/include/bits/select.h \
+ /usr/include/bits/sigset.h /usr/include/bits/time.h \
+ /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h \
+ /usr/include/alloca.h /usr/include/stdio.h /usr/include/libio.h \
+ /usr/include/_G_config.h /usr/include/wchar.h \
+ /usr/lib/gcc/i686-redhat-linux/4.5.1/include/stdarg.h \
+ /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+ /usr/include/bits/stdio.h /usr/include/string.h /usr/include/xlocale.h \
+ /usr/include/bits/string.h /usr/include/bits/string2.h \
+ /usr/include/sys/mman.h /usr/include/bits/mman.h /usr/include/fcntl.h \
+ /usr/include/bits/fcntl.h /usr/include/bits/stat.h \
+ /usr/include/byteswap.h /usr/include/sys/stat.h /usr/include/unistd.h \
+ /usr/include/bits/posix_opt.h /usr/include/bits/environments.h \
+ /usr/include/bits/confname.h /usr/include/getopt.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/include/sha1.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/tools/fdt_host.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/tools/../include/fdt.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/tools/../include/libfdt.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/include/libfdt_env.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/include/compiler.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/include/fdt.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/tools/../include/fdt_support.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/include/image.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/include/command.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/include/config.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/include/configs/mv_dove.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/include/asm/config.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/include/configs/../../board/marvell/mv_dove/config/mvSysHwConfig.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/include/config_cmd_default.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/include/libfdt.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/include/fdt_support.h
+gen_eth_addr.o: \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/tools/gen_eth_addr.c \
+ /usr/include/stdio.h /usr/include/features.h /usr/include/sys/cdefs.h \
+ /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+ /usr/include/gnu/stubs-32.h \
+ /usr/lib/gcc/i686-redhat-linux/4.5.1/include/stddef.h \
+ /usr/include/bits/types.h /usr/include/bits/typesizes.h \
+ /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
+ /usr/lib/gcc/i686-redhat-linux/4.5.1/include/stdarg.h \
+ /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+ /usr/include/bits/stdio.h /usr/include/stdlib.h \
+ /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h \
+ /usr/include/endian.h /usr/include/bits/endian.h \
+ /usr/include/bits/byteswap.h /usr/include/sys/types.h \
+ /usr/include/time.h /usr/include/sys/select.h /usr/include/bits/select.h \
+ /usr/include/bits/sigset.h /usr/include/bits/time.h \
+ /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h \
+ /usr/include/alloca.h /usr/include/unistd.h \
+ /usr/include/bits/posix_opt.h /usr/include/bits/environments.h \
+ /usr/include/bits/confname.h /usr/include/getopt.h \
+ /usr/include/xlocale.h
+os_support.o: \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/tools/os_support.c \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/include/compiler.h \
+ /usr/lib/gcc/i686-redhat-linux/4.5.1/include/stddef.h \
+ /usr/lib/gcc/i686-redhat-linux/4.5.1/include/stdint.h \
+ /usr/include/stdint.h /usr/include/features.h /usr/include/sys/cdefs.h \
+ /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+ /usr/include/gnu/stubs-32.h /usr/include/bits/wchar.h \
+ /usr/include/errno.h /usr/include/bits/errno.h \
+ /usr/include/linux/errno.h /usr/include/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/stdlib.h /usr/include/bits/waitflags.h \
+ /usr/include/bits/waitstatus.h /usr/include/endian.h \
+ /usr/include/bits/endian.h /usr/include/bits/byteswap.h \
+ /usr/include/sys/types.h /usr/include/bits/types.h \
+ /usr/include/bits/typesizes.h /usr/include/time.h \
+ /usr/include/sys/select.h /usr/include/bits/select.h \
+ /usr/include/bits/sigset.h /usr/include/bits/time.h \
+ /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h \
+ /usr/include/alloca.h /usr/include/stdio.h /usr/include/libio.h \
+ /usr/include/_G_config.h /usr/include/wchar.h \
+ /usr/lib/gcc/i686-redhat-linux/4.5.1/include/stdarg.h \
+ /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+ /usr/include/bits/stdio.h /usr/include/string.h /usr/include/xlocale.h \
+ /usr/include/bits/string.h /usr/include/bits/string2.h \
+ /usr/include/sys/mman.h /usr/include/bits/mman.h /usr/include/fcntl.h \
+ /usr/include/bits/fcntl.h /usr/include/bits/stat.h \
+ /usr/include/byteswap.h
+fdt.o: /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/libfdt/fdt.c \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/include/libfdt_env.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/include/compiler.h \
+ /usr/lib/gcc/i686-redhat-linux/4.5.1/include/stddef.h \
+ /usr/lib/gcc/i686-redhat-linux/4.5.1/include/stdint.h \
+ /usr/include/stdint.h /usr/include/features.h /usr/include/sys/cdefs.h \
+ /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+ /usr/include/gnu/stubs-32.h /usr/include/bits/wchar.h \
+ /usr/include/errno.h /usr/include/bits/errno.h \
+ /usr/include/linux/errno.h /usr/include/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/stdlib.h /usr/include/bits/waitflags.h \
+ /usr/include/bits/waitstatus.h /usr/include/endian.h \
+ /usr/include/bits/endian.h /usr/include/bits/byteswap.h \
+ /usr/include/sys/types.h /usr/include/bits/types.h \
+ /usr/include/bits/typesizes.h /usr/include/time.h \
+ /usr/include/sys/select.h /usr/include/bits/select.h \
+ /usr/include/bits/sigset.h /usr/include/bits/time.h \
+ /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h \
+ /usr/include/alloca.h /usr/include/stdio.h /usr/include/libio.h \
+ /usr/include/_G_config.h /usr/include/wchar.h \
+ /usr/lib/gcc/i686-redhat-linux/4.5.1/include/stdarg.h \
+ /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+ /usr/include/bits/stdio.h /usr/include/string.h /usr/include/xlocale.h \
+ /usr/include/bits/string.h /usr/include/bits/string2.h \
+ /usr/include/sys/mman.h /usr/include/bits/mman.h /usr/include/fcntl.h \
+ /usr/include/bits/fcntl.h /usr/include/bits/stat.h \
+ /usr/include/byteswap.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/tools/fdt_host.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/tools/../include/fdt.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/tools/../include/libfdt.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/include/fdt.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/tools/../include/fdt_support.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/libfdt/libfdt_internal.h
+fdt_ro.o: \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/libfdt/fdt_ro.c \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/include/libfdt_env.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/include/compiler.h \
+ /usr/lib/gcc/i686-redhat-linux/4.5.1/include/stddef.h \
+ /usr/lib/gcc/i686-redhat-linux/4.5.1/include/stdint.h \
+ /usr/include/stdint.h /usr/include/features.h /usr/include/sys/cdefs.h \
+ /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+ /usr/include/gnu/stubs-32.h /usr/include/bits/wchar.h \
+ /usr/include/errno.h /usr/include/bits/errno.h \
+ /usr/include/linux/errno.h /usr/include/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/stdlib.h /usr/include/bits/waitflags.h \
+ /usr/include/bits/waitstatus.h /usr/include/endian.h \
+ /usr/include/bits/endian.h /usr/include/bits/byteswap.h \
+ /usr/include/sys/types.h /usr/include/bits/types.h \
+ /usr/include/bits/typesizes.h /usr/include/time.h \
+ /usr/include/sys/select.h /usr/include/bits/select.h \
+ /usr/include/bits/sigset.h /usr/include/bits/time.h \
+ /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h \
+ /usr/include/alloca.h /usr/include/stdio.h /usr/include/libio.h \
+ /usr/include/_G_config.h /usr/include/wchar.h \
+ /usr/lib/gcc/i686-redhat-linux/4.5.1/include/stdarg.h \
+ /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+ /usr/include/bits/stdio.h /usr/include/string.h /usr/include/xlocale.h \
+ /usr/include/bits/string.h /usr/include/bits/string2.h \
+ /usr/include/sys/mman.h /usr/include/bits/mman.h /usr/include/fcntl.h \
+ /usr/include/bits/fcntl.h /usr/include/bits/stat.h \
+ /usr/include/byteswap.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/tools/fdt_host.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/tools/../include/fdt.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/tools/../include/libfdt.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/include/fdt.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/tools/../include/fdt_support.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/libfdt/libfdt_internal.h
+fdt_rw.o: \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/libfdt/fdt_rw.c \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/include/libfdt_env.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/include/compiler.h \
+ /usr/lib/gcc/i686-redhat-linux/4.5.1/include/stddef.h \
+ /usr/lib/gcc/i686-redhat-linux/4.5.1/include/stdint.h \
+ /usr/include/stdint.h /usr/include/features.h /usr/include/sys/cdefs.h \
+ /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+ /usr/include/gnu/stubs-32.h /usr/include/bits/wchar.h \
+ /usr/include/errno.h /usr/include/bits/errno.h \
+ /usr/include/linux/errno.h /usr/include/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/stdlib.h /usr/include/bits/waitflags.h \
+ /usr/include/bits/waitstatus.h /usr/include/endian.h \
+ /usr/include/bits/endian.h /usr/include/bits/byteswap.h \
+ /usr/include/sys/types.h /usr/include/bits/types.h \
+ /usr/include/bits/typesizes.h /usr/include/time.h \
+ /usr/include/sys/select.h /usr/include/bits/select.h \
+ /usr/include/bits/sigset.h /usr/include/bits/time.h \
+ /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h \
+ /usr/include/alloca.h /usr/include/stdio.h /usr/include/libio.h \
+ /usr/include/_G_config.h /usr/include/wchar.h \
+ /usr/lib/gcc/i686-redhat-linux/4.5.1/include/stdarg.h \
+ /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+ /usr/include/bits/stdio.h /usr/include/string.h /usr/include/xlocale.h \
+ /usr/include/bits/string.h /usr/include/bits/string2.h \
+ /usr/include/sys/mman.h /usr/include/bits/mman.h /usr/include/fcntl.h \
+ /usr/include/bits/fcntl.h /usr/include/bits/stat.h \
+ /usr/include/byteswap.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/tools/fdt_host.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/tools/../include/fdt.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/tools/../include/libfdt.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/include/fdt.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/tools/../include/fdt_support.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/libfdt/libfdt_internal.h
+fdt_strerror.o: \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/libfdt/fdt_strerror.c \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/include/libfdt_env.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/include/compiler.h \
+ /usr/lib/gcc/i686-redhat-linux/4.5.1/include/stddef.h \
+ /usr/lib/gcc/i686-redhat-linux/4.5.1/include/stdint.h \
+ /usr/include/stdint.h /usr/include/features.h /usr/include/sys/cdefs.h \
+ /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+ /usr/include/gnu/stubs-32.h /usr/include/bits/wchar.h \
+ /usr/include/errno.h /usr/include/bits/errno.h \
+ /usr/include/linux/errno.h /usr/include/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/stdlib.h /usr/include/bits/waitflags.h \
+ /usr/include/bits/waitstatus.h /usr/include/endian.h \
+ /usr/include/bits/endian.h /usr/include/bits/byteswap.h \
+ /usr/include/sys/types.h /usr/include/bits/types.h \
+ /usr/include/bits/typesizes.h /usr/include/time.h \
+ /usr/include/sys/select.h /usr/include/bits/select.h \
+ /usr/include/bits/sigset.h /usr/include/bits/time.h \
+ /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h \
+ /usr/include/alloca.h /usr/include/stdio.h /usr/include/libio.h \
+ /usr/include/_G_config.h /usr/include/wchar.h \
+ /usr/lib/gcc/i686-redhat-linux/4.5.1/include/stdarg.h \
+ /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+ /usr/include/bits/stdio.h /usr/include/string.h /usr/include/xlocale.h \
+ /usr/include/bits/string.h /usr/include/bits/string2.h \
+ /usr/include/sys/mman.h /usr/include/bits/mman.h /usr/include/fcntl.h \
+ /usr/include/bits/fcntl.h /usr/include/bits/stat.h \
+ /usr/include/byteswap.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/tools/fdt_host.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/tools/../include/fdt.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/tools/../include/libfdt.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/include/fdt.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/tools/../include/fdt_support.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/libfdt/libfdt_internal.h
+fdt_wip.o: \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/libfdt/fdt_wip.c \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/include/libfdt_env.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/include/compiler.h \
+ /usr/lib/gcc/i686-redhat-linux/4.5.1/include/stddef.h \
+ /usr/lib/gcc/i686-redhat-linux/4.5.1/include/stdint.h \
+ /usr/include/stdint.h /usr/include/features.h /usr/include/sys/cdefs.h \
+ /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+ /usr/include/gnu/stubs-32.h /usr/include/bits/wchar.h \
+ /usr/include/errno.h /usr/include/bits/errno.h \
+ /usr/include/linux/errno.h /usr/include/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/stdlib.h /usr/include/bits/waitflags.h \
+ /usr/include/bits/waitstatus.h /usr/include/endian.h \
+ /usr/include/bits/endian.h /usr/include/bits/byteswap.h \
+ /usr/include/sys/types.h /usr/include/bits/types.h \
+ /usr/include/bits/typesizes.h /usr/include/time.h \
+ /usr/include/sys/select.h /usr/include/bits/select.h \
+ /usr/include/bits/sigset.h /usr/include/bits/time.h \
+ /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h \
+ /usr/include/alloca.h /usr/include/stdio.h /usr/include/libio.h \
+ /usr/include/_G_config.h /usr/include/wchar.h \
+ /usr/lib/gcc/i686-redhat-linux/4.5.1/include/stdarg.h \
+ /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+ /usr/include/bits/stdio.h /usr/include/string.h /usr/include/xlocale.h \
+ /usr/include/bits/string.h /usr/include/bits/string2.h \
+ /usr/include/sys/mman.h /usr/include/bits/mman.h /usr/include/fcntl.h \
+ /usr/include/bits/fcntl.h /usr/include/bits/stat.h \
+ /usr/include/byteswap.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/tools/fdt_host.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/tools/../include/fdt.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/tools/../include/libfdt.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/include/fdt.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/tools/../include/fdt_support.h \
+ /media/CommonDisk/source/d2plug/d3-dove_uboot-1g/libfdt/libfdt_internal.h
